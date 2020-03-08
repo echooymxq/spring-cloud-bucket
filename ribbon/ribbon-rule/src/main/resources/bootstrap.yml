@@ -1,0 +1,8 @@
+server:
+  port: 50227
+
+service-provider:
+  ribbon:
+    # retry 1 default when error. DefaultClientConfigImpl#DEFAULT_MAX_AUTO_RETRIES_NEXT_SERVER
+    MaxAutoRetriesNextServer: 0
+    NFLoadBalancerRuleClassName: org.easywheelsoft.ribbon.rule.CustomRule
