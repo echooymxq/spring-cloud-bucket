@@ -7,8 +7,8 @@
 ```java
 @FeignClient(name = "echo-service")
 public interface EchoService {
-  @GetMapping("/echo/{str}")
-  String echo(String str);
+	@GetMapping("/echo/{str}")
+	String echo(String str);
 }
 ```
 
@@ -22,8 +22,8 @@ public class RibbonClientsAutoConfiguration {
 
 @Configuration(proxyBeanMethods = false)
 public class CustomClientsConfiguration {
-
-  // 指定路由规则
+ 
+	// 指定路由规则
 	@Bean
 	public IRule ribbonRule() {
 		return new BestAvailableRule();
@@ -56,7 +56,7 @@ public class RibbonAllClientsAutoConfiguration {
 
 	static class DefaultAllClientsConfiguration {
 		// 全局指定路由规则
-    @Bean
+		@Bean
 		public IRule ribbonRule() {
 			return new AvailabilityFilteringRule();
 		}
