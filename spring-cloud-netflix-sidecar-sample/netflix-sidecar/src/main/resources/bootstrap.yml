@@ -1,0 +1,18 @@
+server:
+  port: 9028
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9246/eureka
+sidecar:
+  port: 8081
+  home-page-uri: http://127.0.0.1:${sidecar.port}/
+  health-uri: http://127.0.0.1:${sidecar.port}/health
+spring:
+  application:
+    name: sidecar-svc
+
+ribbon:
+  ConnectTimeout:  50000
+  ReadTimeout:  50000

@@ -10,6 +10,7 @@
 	<modules>
 		<module>ribbon</module>
 		<module>spring-cloud-alibaba-seata-example</module>
+		<module>spring-cloud-netflix-sidecar-sample</module>
 	</modules>
 	<packaging>pom</packaging>
 

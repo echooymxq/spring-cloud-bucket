@@ -1,0 +1,15 @@
+server:
+  port: 9246
+
+
+eureka:
+  instance:
+    hostname: ${spring.application.name}
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:${server.port}/eureka
+    register-with-eureka: false
+    fetch-registry: false
+spring:
+  application:
+    name: sidecar-eureka-svc
