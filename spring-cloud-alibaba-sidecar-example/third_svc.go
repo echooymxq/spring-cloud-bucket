@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/jasonlvhit/gocron"
 	"io/ioutil"
 	"net/http"
 )
@@ -13,8 +14,8 @@ func main() {
 	http.HandleFunc("/echo", echo)
 
 	go func() {
-		//_ = gocron.Every(1).Second().Do(call)
-		//<-gocron.Start()
+		_ = gocron.Every(1).Second().Do(call)
+		<-gocron.Start()
 	}()
 
 	http.ListenAndServe("127.0.0.1:8081", nil)
