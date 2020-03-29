@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: sidecar-svc
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+sidecar:
+  ip: 127.0.0.1
+  port: 8081
+  health-check-url: http://127.0.0.1:${sidecar.port}/health
+  health-check-interval: 30000
+
+server:
+  port: 9028

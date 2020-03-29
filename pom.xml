@@ -11,6 +11,7 @@
 		<module>ribbon</module>
 		<module>spring-cloud-alibaba-seata-example</module>
 		<module>spring-cloud-netflix-sidecar-sample</module>
+		<module>spring-cloud-alibaba-sidecar-example</module>
 	</modules>
 	<packaging>pom</packaging>
 
